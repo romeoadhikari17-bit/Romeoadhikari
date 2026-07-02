@@ -73,46 +73,66 @@
             border: 1px solid #38bdf8;
         }
 
-        /* Pricing Card Grid Styling */
-        .pricing-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 1.5rem;
-            margin-top: 1.5rem;
-        }
-
-        .price-card {
+        /* Pricing Area Styling */
+        .price-box {
             background-color: #0f172a;
             border: 1px solid #334155;
             border-radius: 8px;
             padding: 1.5rem;
             text-align: center;
-            transition: transform 0.2s, border-color 0.2s;
-        }
-
-        .price-card:hover {
-            transform: translateY(-4px);
-            border-color: #38bdf8;
-        }
-
-        .price-card h3 {
-            color: #94a3b8;
-            font-size: 1.1rem;
-            margin-bottom: 0.5rem;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
+            margin: 1.5rem 0;
         }
 
         .price-amount {
-            font-size: 1.8rem;
+            font-size: 2.2rem;
             color: #38bdf8;
             font-weight: bold;
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.25rem;
         }
 
         .price-unit {
-            font-size: 0.9rem;
+            font-size: 1rem;
             color: #64748b;
+            margin-bottom: 1rem;
+        }
+
+        /* QR Payment Box Styling */
+        .qr-payment-box {
+            margin-top: 2rem;
+            background-color: #0f172a;
+            border: 1px dashed #38bdf8;
+            border-radius: 8px;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .qr-payment-box h3 {
+            color: #38bdf8;
+            margin-bottom: 0.5rem;
+        }
+
+        .qr-payment-box p {
+            font-size: 0.95rem;
+            color: #94a3b8;
+            margin-bottom: 1.5rem;
+        }
+
+        .qr-image {
+            width: 220px;
+            height: 220px;
+            border: 4px solid #ffffff;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
+        }
+
+        .supported-logos {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            font-size: 0.85rem;
+            color: #38bdf8;
+            font-weight: 500;
         }
 
         .contact-list {
@@ -178,26 +198,29 @@
             </div>
         </section>
 
-        <!-- Pricing Section -->
+        <!-- Pricing & Payment Section -->
         <section id="pricing">
-            <h2>Pricing Plans</h2>
-            <p>Fair and flexible pricing based on your project requirements. I accept payments in both Nepalese and Indian currencies.</p>
+            <h2>Pricing & Easy Payments</h2>
+            <p>Fair and flexible pricing based on your project requirements. Payments are handled directly in Nepalese Rupees (NPR).</p>
             
-            <div class="pricing-grid">
-                <!-- NPR Card -->
-                <div class="price-card">
-                    <h3>NPR Rate</h3>
-                    <div class="price-amount">Rs. 2,500+</div>
-                    <div class="price-unit">per project / page</div>
-                    <p style="margin-top: 1rem; font-size: 0.9rem; color: #94a3b8;">For clients inside Nepal. Local bank transfer or eSewa/Khalti accepted.</p>
-                </div>
+            <div class="price-box">
+                <div class="price-amount">Rs. 2,500+</div>
+                <div class="price-unit">per project / page</div>
+                <p style="font-size: 0.95rem; color: #94a3b8;">Rates may change depending on the code complexity and time required.</p>
+            </div>
 
-                <!-- INR Card -->
-                <div class="price-card">
-                    <h3>INR (IC) Rate</h3>
-                    <div class="price-amount">₹1,500+</div>
-                    <div class="price-unit">per project / page</div>
-                    <p style="margin-top: 1rem; font-size: 0.9rem; color: #94a3b8;">For international clients. Standard exchange rates apply.</p>
+            <!-- Unified QR Box -->
+            <div class="qr-payment-box">
+                <h3>Scan to Pay (Global IME Bank)</h3>
+                <p>Open your banking app or digital wallet and scan the code below to complete your payment instantly.</p>
+                
+                <!-- Make sure to save your Global IME QR code screenshot as 'qr-code.jpg' in the same folder -->
+                <img src="qr-code.jpg" alt="Romeo Adhikari Global IME Bank QR Code" class="qr-image">
+                
+                <div class="supported-logos">
+                    <span>✓ Mobile Banking</span>
+                    <span>✓ Fonepay</span>
+                    <span>✓ eSewa / Khalti</span>
                 </div>
             </div>
         </section>
@@ -210,7 +233,7 @@
             <ul class="contact-list">
                 <li>
                     <span class="label">Email:</span>
-                    <!-- Clicking this launches Gmail web client with a fresh compose window -->
+                    <!-- Launches Gmail web client directly with your address pre-filled -->
                     <a href="https://mail.google.com/mail/?view=cm&fs=1&to=romeo.adhikari.17@gmail.com" target="_blank">romeo.adhikari.17@gmail.com</a>
                 </li>
                 <li>
