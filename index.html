@@ -4,78 +4,157 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Romeo Adhikari</title>
-
     <style>
-        body {
+        * {
             margin: 0;
-            font-family: Arial, sans-serif;
-            background: #f0f2f5;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #0f172a;
+            color: #f8fafc;
+            line-height: 1.6;
         }
 
         header {
-            background: #2563eb;
-            color: white;
+            background-color: #1e293b;
+            padding: 2rem 1rem;
             text-align: center;
-            padding: 60px 20px;
+            border-bottom: 2px solid #38bdf8;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: #38bdf8;
+            margin-bottom: 0.5rem;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            color: #94a3b8;
         }
 
         section {
-            max-width: 800px;
-            margin: 30px auto;
-            background: white;
-            padding: 25px;
-            border-radius: 12px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            margin-bottom: 3rem;
+            background: #1e293b;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
         }
 
         h2 {
-            color: #2563eb;
+            color: #38bdf8;
+            margin-bottom: 1rem;
+            border-bottom: 1px solid #334155;
+            padding-bottom: 0.5rem;
         }
 
-        ul {
-            line-height: 2;
+        .skills-container {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-top: 1rem;
+        }
+
+        .skill-badge {
+            background-color: #0f172a;
+            color: #38bdf8;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-weight: bold;
+            border: 1px solid #38bdf8;
+        }
+
+        .contact-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .contact-list li {
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            font-size: 1.1rem;
+        }
+
+        .contact-list a {
+            color: #38bdf8;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .contact-list a:hover {
+            text-decoration: underline;
+            color: #7dd3fc;
+        }
+
+        .label {
+            font-weight: bold;
+            width: 100px;
+            color: #94a3b8;
         }
 
         footer {
-            background: #1f2937;
-            color: white;
             text-align: center;
-            padding: 15px;
-            margin-top: 30px;
+            padding: 2rem;
+            color: #64748b;
+            font-size: 0.9rem;
         }
     </style>
 </head>
 <body>
 
-<header>
-    <h1>Romeo Adhikari</h1>
-    <p>Developer</p>
-</header>
+    <header>
+        <h1>Romeo Adhikari</h1>
+        <p class="subtitle">Python & HTML Developer</p>
+    </header>
 
-<section>
-    <h2>About Me</h2>
-    <p>
-        Hi! I'm Romeo Adhikari, a developer who enjoys building websites
-        and learning new technologies. I like creating useful and creative
-        projects using HTML, CSS, and Python.
-    </p>
+    <div class="container">
+        
+        <section id="about">
+            <h2>About Me</h2>
+            <p>Hello! I am Romeo, a passionate developer specializing in building clean, functional applications and web experiences. By combining the logic of <strong>Python</strong> with the foundational structure of <strong>HTML</strong>, I enjoy bringing digital ideas to life.</p>
+        </section>
 
-    <h2>Skills</h2>
-    <ul>
-        <li>HTML</li>
-        <li>CSS</li>
-        <li>Python</li>
-    </ul>
+        <section id="skills">
+            <h2>Core Skills</h2>
+            <div class="skills-container">
+                <span class="skill-badge">Python</span>
+                <span class="skill-badge">HTML5</span>
+                <span class="skill-badge">Web Development</span>
+                <span class="skill-badge">Problem Solving</span>
+            </div>
+        </section>
 
-    <h2>My Goal</h2>
-    <p>
-        To improve my programming skills and create amazing web projects.
-    </p>
-</section>
+        <section id="contact">
+            <h2>Get In Touch</h2>
+            <p style="margin-bottom: 1.5rem;">Interested in collaborating or hiring me for a project? Feel free to reach out via phone or email!</p>
+            
+            <ul class="contact-list">
+                <li>
+                    <span class="label">Email:</span>
+                    <a href="mailto:romro.adhikari.17@gmail.com">romro.adhikari.17@gmail.com</a>
+                </li>
+                <li>
+                    <span class="label">Phone:</span>
+                    <a href="tel:+9779841092364">+977 984-1092364</a>
+                </li>
+            </ul>
+        </section>
 
-<footer>
-    © 2026 Romeo Adhikari | Developer
-</footer>
+    </div>
+
+    <footer>
+        &copy; 2026 Romeo Adhikari. All rights reserved.
+    </footer>
 
 </body>
 </html>
